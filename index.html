@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Flag Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Judson&family=Lora:wght@500&family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body> 
+    <div class="game-container" id="game-container">
+      <div class="game-wrapper">
+        <form action="" id="new-game">
+          <h1>Country Flag Guessing Game</h1>
+          <label for="select-mode">Select mode</label>
+
+          <select name="mode" id="mode">
+            <option value="Easy">Easy</option>
+            <option value="Hard">Hard</option>
+            <option value="Medium">Medium</option>
+            
+          </select>
+          <button id="start-game" class="start-game">Start game</button>
+        </form>
+      </div>
+    </div>
+    <div class="question-container" id="question-container">
+      <div class="navbar">
+        <p>Score: <span id="score"><strong>0</strong></span></p>
+        <div id="modedisplay"><strong>Mode:</strong></div>
+        
+        <div id="timer"><strong>100</strong></div>
+      </div>
+    </div>
+
+    <div id="maingame">
+      <button  class="checkbtn" id="pause" onclick="pauseTimer()">Pause</button>
+      <button  class="checkbtn" id="Continue" onclick="continueTimer()">Continue</button>
+      <h1>Country Flag Guessing Game</h1>
+      
+      <img id="flag" alt="Country Flag" />
+      <br />
+      
+      <label for="guess">Enter the country name:</label>
+      <input type="text" id="guess" autocomplete="off" />
+      <button class="checkbtn" id="checkbtn" onclick="checkGuess()">Submit Guess</button>
+      <div class="correct-anwer" id="correct-answer-display"></div>
+      
+    </div>
+
+
+    <div class="copywrite">Made by <a href="https://github.com/Mudrick44">Mudrick</a> </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
